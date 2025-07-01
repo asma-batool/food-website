@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AISU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>AISU</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="ordernow.html" class="blinky">order now</a>
+      <a href="aboutus.html">about us</a>
+    </nav>
+    <div class="auth-buttons">
+    <a href="login.html" class="btn">Log In</a>
+    <a href="signup.html" class="btn signup">Sign Up</a>
+
+    <!-- for different language -->
+    <select id="language-select">
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+      <option value="fr">FR</option>
+    </select>
+  </div>
+  </header>
+  <!-- for search bar -->
+  <div class="swiss-search-bar">
+  <input
+    type="text"
+    id="swiss-address"
+    placeholder="Enter Swiss address or postal code"
+    autocomplete="off"
+    aria-label="Enter your address in Switzerland"
+  />
+  <button id="swiss-search-btn">Find food</button>
+</div>
+  <section class="hero">
+    <h2>Delicious Food, Cozy Atmosphere</h2>
+    <p>Come dine with us!</p>
+  </section>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+    <a href="tel:+4171 850 94 22" class="phone-link">Call us: +41 71 850 94 22</a>
+  </p>
+  </section>
+<script>
+const translations = {
+  en: {
+    home: "Home",
+    menu: "Menu",
+    order: "order now",
+    about: "about us",
+    login: "Log In",
+    signup: "Sign Up",
+    heroTitle: "Delicious Food, Cozy Atmosphere",
+    heroText: "Come dine with us!",
+    aboutTitle: "About Us",
+    aboutText: "Welcome to Sunset Bistro — a place where food meets soul.",
+    footer: "&copy; 2025 Sunset Bistro. All rights reserved."
+  },
+  es: {
+    home: "Inicio",
+    menu: "Menú",
+    order: "ordenar ahora",
+    about: "sobre nosotros",
+    login: "Iniciar sesión",
+    signup: "Regístrate",
+    heroTitle: "Comida deliciosa, ambiente acogedor",
+    heroText: "¡Ven a cenar con nosotros!",
+    aboutTitle: "Sobre nosotros",
+    aboutText: "Bienvenido a Sunset Bistro — un lugar donde la comida se encuentra con el alma.",
+    footer: "&copy; 2025 Sunset Bistro. Todos los derechos reservados."
+  },
+  fr: {
+    home: "Accueil",
+    menu: "Menu",
+    order: "commander",
+    about: "à propos",
+    login: "Connexion",
+    signup: "S'inscrire",
+    heroTitle: "Nourriture délicieuse, ambiance chaleureuse",
+    heroText: "Venez dîner avec nous !",
+    aboutTitle: "À propos de nous",
+    aboutText: "Bienvenue au Sunset Bistro — un endroit où la nourriture rencontre l'âme.",
+    footer: "&copy; 2025 Sunset Bistro. Tous droits réservés."
+  }
+};
+
+document.getElementById('language-select').addEventListener('change', function() {
+  const lang = this.value;
+  document.querySelectorAll('[data-translate]').forEach(el => {
+    const key = el.getAttribute('data-translate');
+    el.innerHTML = translations[lang][key];
+  });
+  document.querySelector('.hero h2').innerHTML = translations[lang].heroTitle;
+  document.querySelector('.hero p').innerHTML = translations[lang].heroText;
+  document.querySelector('.about h2').innerHTML = translations[lang].aboutTitle;
+  document.querySelector('.about p').innerHTML = translations[lang].aboutText;
+  document.querySelector('footer p').innerHTML = translations[lang].footer;
+});
+</script>
+
+  <footer>
+    <p>&copy; 2025 AISU. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

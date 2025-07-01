@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>AISU Menu</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="ordernow.html" class="blinky">order now</a>
+      <a href="aboutus.html">about us</a>
+    </nav>
+  </header>
+  <main>
+    <section class="menu-list">
+      <h2>Our Dishes</h2>
+
+       <!-- Category Filter Buttons -->
+      <div class="menu-filters">
+        <button onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('pizza')">Pizza</button>
+        <button onclick="filterMenu('swiss')">Swiss</button>
+        <!-- Add more categories as needed -->
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card" data-category="pizza">
+          <img src="images/dish1.jpg" alt="Dish 1">
+          <h3>Margherita Pizza</h3>
+          <p>Classic pizza with tomato, mozzarella, and basil.</p>
+          <span class="price">CHF 12.00</span>
+        </div>
+        <div class="menu-card" data-category="swiss">
+          <img src="images/dish2.jpg" alt="Dish 2">
+          <h3>Swiss Rösti</h3>
+          <p>Crispy potato pancake served with cheese and herbs.</p>
+          <span class="price">CHF 10.00</span>
+        </div>
+        
+        <!-- Add more dishes as needed -->
+      </div>
+
+      <script>
+      function filterMenu(category) {
+        const cards = document.querySelectorAll('.menu-card');
+        cards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+      </script>
+    </section>
+  </main>
+</body>
+</html>
