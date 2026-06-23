@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu - AISU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>AISU</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="ordernow.html" class="blinky">order now</a>
+      <a href="aboutus.html">about us</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn">Log In</a>
+      <a href="signup.html" class="btn signup">Sign Up</a>
+      <select id="language-select">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="menu-section">
+    <h2>Our Menu</h2>
+    
+    <div class="filter-buttons">
+      <button onclick="filterMenu('all')" class="active">All</button>
+      <button onclick="filterMenu('pizza')">Pizza</button>
+      <button onclick="filterMenu('swiss')">Swiss</button>
+      <button onclick="filterMenu('dessert')">Desserts</button>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card" data-category="pizza">
+        <img src="images/pizza1.jpg" alt="Margherita Pizza">
+        <h3>Margherita Pizza</h3>
+        <p>Classic pizza with tomato, mozzarella, and fresh basil.</p>
+        <span class="price">CHF 18.00</span>
+      </div>
+      
+      <div class="menu-card" data-category="swiss">
+        <img src="images/rosti.jpg" alt="Swiss Rösti">
+        <h3>Swiss Rösti</h3>
+        <p>Crispy potato pancake served with cheese and herbs.</p>
+        <span class="price">CHF 15.00</span>
+      </div>
+      
+      <div class="menu-card" data-category="pizza">
+        <img src="images/pizza2.jpg" alt="Quattro Stagioni">
+        <h3>Quattro Stagioni</h3>
+        <p>Pizza with mushrooms, artichokes, ham, and olives.</p>
+        <span class="price">CHF 22.00</span>
+      </div>
+      
+      <div class="menu-card" data-category="swiss">
+        <img src="images/fondue.jpg" alt="Cheese Fondue">
+        <h3>Cheese Fondue</h3>
+        <p>Traditional Swiss cheese fondue with bread cubes.</p>
+        <span class="price">CHF 28.00</span>
+      </div>
+      
+      <div class="menu-card" data-category="dessert">
+        <img src="images/gelato.jpg" alt="Gelato">
+        <h3>Artisan Gelato</h3>
+        <p>Homemade Italian gelato in various flavors.</p>
+        <span class="price">CHF 8.00</span>
+      </div>
+      
+      <div class="menu-card" data-category="dessert">
+        <img src="images/tiramisu.jpg" alt="Tiramisu">
+        <h3>Tiramisu</h3>
+        <p>Classic Italian dessert with coffee and mascarpone.</p>
+        <span class="price">CHF 12.00</span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function filterMenu(category) {
+      const cards = document.querySelectorAll('.menu-card');
+      const buttons = document.querySelectorAll('.filter-buttons button');
+      
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 AISU. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
