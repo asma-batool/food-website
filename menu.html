@@ -13,8 +13,8 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
-      <a href="ordernow.html" class="blinky">order now</a>
-      <a href="aboutus.html">about us</a>
+      <a href="ordernow.html" class="blinky">Order Now</a>
+      <a href="aboutus.html">About Us</a>
     </nav>
     <div class="auth-buttons">
       <a href="login.html" class="btn">Log In</a>
@@ -29,12 +29,12 @@
 
   <section class="menu-section">
     <h2>Our Menu</h2>
-    
+
     <div class="filter-buttons">
-      <button onclick="filterMenu('all')" class="active">All</button>
-      <button onclick="filterMenu('pizza')">Pizza</button>
-      <button onclick="filterMenu('swiss')">Swiss</button>
-      <button onclick="filterMenu('dessert')">Desserts</button>
+      <button onclick="filterMenu('all', this)" class="active">All</button>
+      <button onclick="filterMenu('pizza', this)">Pizza</button>
+      <button onclick="filterMenu('swiss', this)">Swiss</button>
+      <button onclick="filterMenu('dessert', this)">Desserts</button>
     </div>
 
     <div class="menu-grid">
@@ -44,35 +44,35 @@
         <p>Classic pizza with tomato, mozzarella, and fresh basil.</p>
         <span class="price">CHF 18.00</span>
       </div>
-      
+
       <div class="menu-card" data-category="swiss">
         <img src="images/rosti.jpg" alt="Swiss Rösti">
         <h3>Swiss Rösti</h3>
         <p>Crispy potato pancake served with cheese and herbs.</p>
         <span class="price">CHF 15.00</span>
       </div>
-      
+
       <div class="menu-card" data-category="pizza">
         <img src="images/pizza2.jpg" alt="Quattro Stagioni">
         <h3>Quattro Stagioni</h3>
         <p>Pizza with mushrooms, artichokes, ham, and olives.</p>
         <span class="price">CHF 22.00</span>
       </div>
-      
+
       <div class="menu-card" data-category="swiss">
         <img src="images/fondue.jpg" alt="Cheese Fondue">
         <h3>Cheese Fondue</h3>
         <p>Traditional Swiss cheese fondue with bread cubes.</p>
         <span class="price">CHF 28.00</span>
       </div>
-      
+
       <div class="menu-card" data-category="dessert">
         <img src="images/gelato.jpg" alt="Gelato">
         <h3>Artisan Gelato</h3>
         <p>Homemade Italian gelato in various flavors.</p>
         <span class="price">CHF 8.00</span>
       </div>
-      
+
       <div class="menu-card" data-category="dessert">
         <img src="images/tiramisu.jpg" alt="Tiramisu">
         <h3>Tiramisu</h3>
@@ -83,20 +83,31 @@
   </section>
 
   <script>
-    function filterMenu(category) {
-      const cards = document.querySelectorAll('.menu-card');
-      const buttons = document.querySelectorAll('.filter-buttons button');
-      
-      cards.forEach(card => {
+    // Called when a filter button is clicked.
+    // 'category' is a string like 'pizza', 'swiss', or 'all'.
+    // 'clickedButton' is the actual button element the user clicked.
+    function filterMenu(category, clickedButton) {
+
+      // Get every menu card on the page
+      var cards = document.querySelectorAll('.menu-card');
+
+      // Loop through each card and show or hide it
+      cards.forEach(function(card) {
         if (category === 'all' || card.dataset.category === category) {
-          card.style.display = '';
+          card.style.display = '';      // show (restore default)
         } else {
-          card.style.display = 'none';
+          card.style.display = 'none';  // hide
         }
       });
-      
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+
+      // Remove the 'active' highlight from every button
+      var buttons = document.querySelectorAll('.filter-buttons button');
+      buttons.forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+
+      // Add 'active' highlight to only the button that was clicked
+      clickedButton.classList.add('active');
     }
   </script>
 

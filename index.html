@@ -8,353 +8,268 @@
 </head>
 <body>
 
-    <header>
-      <h1>AISU</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="ordernow.html" class="blinky">order now</a>
-        <a href="aboutus.html">about us</a>
-      </nav>
-      <div class="auth-buttons">
-      <a href="login.html" class="btn">Log In</a>
-      <a href="signup.html" class="btn signup">Sign Up</a>
-
-      <!-- for different language -->
+  <header>
+    <h1>AISU</h1>
+    <nav>
+      <a href="index.html" data-translate="home">Home</a>
+      <a href="menu.html" data-translate="menu">Menu</a>
+      <a href="ordernow.html" class="blinky" data-translate="order">Order Now</a>
+      <a href="aboutus.html" data-translate="about">About Us</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn" data-translate="login">Log In</a>
+      <a href="signup.html" class="btn signup" data-translate="signup">Sign Up</a>
       <select id="language-select">
         <option value="en">EN</option>
         <option value="es">ES</option>
         <option value="fr">FR</option>
       </select>
-      </div>
-      </header>
-      <!-- for search bar -->
-      <div class="swiss-search-bar">
-      <input
-        type="text"
-        id="swiss-address"
-        placeholder="Enter Swiss address or postal code"
-        autocomplete="off"
-        aria-label="Enter your address in Switzerland"
-          />
-          <button id="swiss-search-btn">Find food</button>
+    </div>
+  </header>
+
+  <!-- Search bar -->
+  <div class="swiss-search-bar">
+    <input
+      type="text"
+      id="swiss-address"
+      placeholder="Enter Swiss address or postal code"
+      autocomplete="off"
+      aria-label="Enter your address in Switzerland"
+    />
+    <button id="swiss-search-btn">Find food</button>
+  </div>
+
+  <section class="hero">
+    <h2 data-translate="heroTitle">Delicious Food, Cozy Atmosphere</h2>
+    <p data-translate="heroText">Come dine with us!</p>
+  </section>
+
+  <!-- Action Buttons -->
+  <section class="action-buttons-section">
+    <div class="action-buttons">
+      <a href="ordernow.html" class="action-btn online-order">
+        <div class="btn-icon">🛒</div>
+        <div class="btn-content">
+          <h3>Online Bestellen</h3>
+          <p>Order food online for delivery or pickup</p>
         </div>
-          <section class="hero">
-            <h2>Delicious Food, Cozy Atmosphere</h2>
-            <p>Come dine with us!</p>
-          </section>
+      </a>
+      <a href="tel:+41718509422" class="action-btn phone-order">
+        <div class="btn-icon">📞</div>
+        <div class="btn-content">
+          <h3>Telefonisch Bestellen</h3>
+          <p>Call us to place your order</p>
+        </div>
+      </a>
+      <a href="reservation.html" class="action-btn table-reservation">
+        <div class="btn-icon">🍽️</div>
+        <div class="btn-content">
+          <h3>Tisch Reservieren</h3>
+          <p>Reserve a table for dining</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
-        <!-- Action Buttons Section -->
-        <section class="action-buttons-section">
-          <div class="action-buttons">
-            <a href="ordernow.html" class="action-btn online-order">
-              <div class="btn-icon">🛒</div>
-              <div class="btn-content">
-                <h3>Online Bestellen</h3>
-                <p>Order food online for delivery or pickup</p>
-              </div>
-            </a>
-            
-            <a href="tel:+41718509422" class="action-btn phone-order">
-              <div class="btn-icon">📞</div>
-              <div class="btn-content">
-                <h3>Telefonisch Bestellen</h3>
-                <p>Call us to place your order</p>
-              </div>
-            </a>
-            
-            <a href="reservation.html" class="action-btn table-reservation">
-              <div class="btn-icon">🍽️</div>
-              <div class="btn-content">
-                <h3>Tisch Reservieren</h3>
-                <p>Reserve a table for dining</p>
-              </div>
-            </a>
-          </div>
-        </section>
+  <!-- Featured Dishes -->
+  <section class="featured-dishes">
+    <h2>Featured Dishes</h2>
+    <div class="dishes-grid">
+      <div class="dish-card">
+        <img src="images/margherita-pizza.jpg" alt="Margherita Pizza" class="dish-image">
+        <div class="dish-info">
+          <h3>Margherita Pizza</h3>
+          <p>Classic Italian pizza with fresh tomatoes, mozzarella, and basil</p>
+          <span class="price">CHF 18.00</span>
+          <a href="ordernow.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="images/swiss-rosti.jpg" alt="Swiss Rösti" class="dish-image">
+        <div class="dish-info">
+          <h3>Swiss Rösti</h3>
+          <p>Crispy golden potato pancake served with fresh herbs and cheese</p>
+          <span class="price">CHF 15.00</span>
+          <a href="ordernow.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="images/cheese-fondue.jpg" alt="Cheese Fondue" class="dish-image">
+        <div class="dish-info">
+          <h3>Traditional Fondue</h3>
+          <p>Authentic Swiss cheese fondue with fresh bread cubes</p>
+          <span class="price">CHF 28.00</span>
+          <a href="ordernow.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="images/tiramisu.jpg" alt="Tiramisu" class="dish-image">
+        <div class="dish-info">
+          <h3>Tiramisu</h3>
+          <p>Classic Italian dessert with coffee, mascarpone, and cocoa</p>
+          <span class="price">CHF 12.00</span>
+          <a href="ordernow.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Featured Dishes Section -->
-        <section class="featured-dishes">
-          <h2>Featured Dishes</h2>
-          <div class="dishes-grid">
-            <div class="dish-card">
-              <img src="images/margherita-pizza.jpg" alt="Margherita Pizza" class="dish-image">
-              <div class="dish-info">
-                <h3>Margherita Pizza</h3>
-                <p>Classic Italian pizza with fresh tomatoes, mozzarella, and basil</p>
-                <span class="price">CHF 18.00</span>
-                <a href="ordernow.html" class="order-btn">Order Now</a>
-              </div>
-            </div>
-            
-            <div class="dish-card">
-              <img src="images/swiss-rosti.jpg" alt="Swiss Rösti" class="dish-image">
-              <div class="dish-info">
-                <h3>Swiss Rösti</h3>
-                <p>Crispy golden potato pancake served with fresh herbs and cheese</p>
-                <span class="price">CHF 15.00</span>
-                <a href="ordernow.html" class="order-btn">Order Now</a>
-              </div>
-            </div>
-            
-            <div class="dish-card">
-              <img src="images/cheese-fondue.jpg" alt="Cheese Fondue" class="dish-image">
-              <div class="dish-info">
-                <h3>Traditional Fondue</h3>
-                <p>Authentic Swiss cheese fondue with fresh bread cubes</p>
-                <span class="price">CHF 28.00</span>
-                <a href="ordernow.html" class="order-btn">Order Now</a>
-              </div>
-            </div>
-            
-            <div class="dish-card">
-              <img src="images/tiramisu.jpg" alt="Tiramisu" class="dish-image">
-              <div class="dish-info">
-                <h3>Tiramisu</h3>
-                <p>Classic Italian dessert with coffee, mascarpone, and cocoa</p>
-                <span class="price">CHF 12.00</span>
-                <a href="ordernow.html" class="order-btn">Order Now</a>
-              </div>
-            </div>
-          </div>
-        </section>
+  <!-- Cuisine Slider -->
+  <section class="cuisine-section">
+    <h2>Cuisines for you</h2>
+    <div class="cuisine-slider-container">
+      <div class="cuisine-slider">
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-pizza.jpg" alt="Pizza"></div><h4>Pizza</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-swiss.jpg" alt="Swiss"></div><h4>Swiss</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-pasta.jpeg" alt="Pasta"></div><h4>Pasta</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-desserts.jpg" alt="Desserts"></div><h4>Desserts</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-burgers.jpg" alt="Burgers"></div><h4>Burgers</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-asian.jpg" alt="Asian"></div><h4>Asian</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-salads.jpg" alt="Salads"></div><h4>Salads</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-seafood.jpg" alt="Seafood"></div><h4>Seafood</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-vegetarian.jpg" alt="Vegetarian"></div><h4>Vegetarian</h4></div>
+        <div class="cuisine-tile"><div class="cuisine-image"><img src="images/cuisine-bbq.jpeg" alt="BBQ"></div><h4>BBQ</h4></div>
+      </div>
+      <button class="slider-btn prev-btn" onclick="slideLeft()">‹</button>
+      <button class="slider-btn next-btn" onclick="slideRight()">›</button>
+    </div>
+  </section>
 
-        <!-- Cuisine Slider Section -->
-        <section class="cuisine-section">
-          <h2>Cuisines for you</h2>
-          <div class="cuisine-slider-container">
-            <div class="cuisine-slider">
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-pizza.jpg" alt="Pizza">
-                </div>
-                <h4>Pizza</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-swiss.jpg" alt="Swiss">
-                </div>
-                <h4>Swiss</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-pasta.jpeg" alt="Pasta">
-                </div>
-                <h4>Pasta</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-desserts.jpg" alt="Desserts">
-                </div>
-                <h4>Desserts</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-burgers.jpg" alt="Burgers">
-                </div>
-                <h4>Burgers</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-asian.jpg" alt="Asian">
-                </div>
-                <h4>Asian</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-salads.jpg" alt="Salads">
-                </div>
-                <h4>Salads</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-seafood.jpg" alt="Seafood">
-                </div>
-                <h4>Seafood</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-vegetarian.jpg" alt="Vegetarian">
-                </div>
-                <h4>Vegetarian</h4>
-              </div>
-              
-              <div class="cuisine-tile">
-                <div class="cuisine-image">
-                  <img src="images/cuisine-bbq.jpeg" alt="BBQ">
-                </div>
-                <h4>BBQ</h4>
-              </div>
-            </div>
-            
-            <!-- Navigation buttons -->
-            <button class="slider-btn prev-btn" onclick="slideLeft()">‹</button>
-            <button class="slider-btn next-btn" onclick="slideRight()">›</button>
-          </div>
-        </section>
+  <!-- Gallery -->
+  <section class="restaurant-gallery">
+    <h2>Our Restaurant &amp; Food</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item large">
+        <img src="images/restaurant-interior.jpg" alt="Restaurant Interior">
+        <div class="gallery-overlay"><h3>Cozy Atmosphere</h3></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/pizza-making.jpeg" alt="Pizza Making">
+        <div class="gallery-overlay"><h3>Fresh Made</h3></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/chef-cooking.jpeg" alt="Chef Cooking">
+        <div class="gallery-overlay"><h3>Expert Chefs</h3></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/food-plating.jpeg" alt="Food Plating">
+        <div class="gallery-overlay"><h3>Beautiful Presentation</h3></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/dining-experience.jpeg" alt="Dining Experience">
+        <div class="gallery-overlay"><h3>Perfect Evening</h3></div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Restaurant Gallery Section -->
-        <section class="restaurant-gallery">
-          <h2>Our Restaurant & Food</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item large">
-              <img src="images/restaurant-interior.jpg" alt="Restaurant Interior">
-              <div class="gallery-overlay">
-                <h3>Cozy Atmosphere</h3>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/pizza-making.jpeg" alt="Pizza Making">
-              <div class="gallery-overlay">
-                <h3>Fresh Made</h3>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/chef-cooking.jpeg" alt="Chef Cooking">
-              <div class="gallery-overlay">
-                <h3>Expert Chefs</h3>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/food-plating.jpeg" alt="Food Plating">
-              <div class="gallery-overlay">
-                <h3>Beautiful Presentation</h3>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/dining-experience.jpeg" alt="Dining Experience">
-              <div class="gallery-overlay">
-                <h3>Perfect Evening</h3>
-              </div>
-            </div>
-          </div>
-        </section>
+  <section class="about">
+    <h2 data-translate="aboutTitle">About Us</h2>
+    <p><a href="tel:+4171 850 94 22" class="phone-link">Call us: +41 71 850 94 22</a></p>
+  </section>
 
-        <section class="about">
-          <h2>About Us</h2>
-          <p>
-          <a href="tel:+4171 850 94 22" class="phone-link">Call us: +41 71 850 94 22</a>
-        </p>
-        </section>
-      <script>
-      const translations = {
-        en: {
-          home: "Home",
-          menu: "Menu",
-          order: "order now",
-          about: "about us",
-          login: "Log In",
-          signup: "Sign Up",
-          heroTitle: "Delicious Food, Cozy Atmosphere",
-          heroText: "Come dine with us!",
-          aboutTitle: "About Us",
-          aboutText: "Welcome to Sunset Bistro — a place where food meets soul.",
-          footer: "&copy; 2025 Sunset Bistro. All rights reserved."
-        },
-        es: {
-          home: "Inicio",
-          menu: "Menú",
-          order: "ordenar ahora",
-          about: "sobre nosotros",
-          login: "Iniciar sesión",
-          signup: "Regístrate",
-          heroTitle: "Comida deliciosa, ambiente acogedor",
-          heroText: "¡Ven a cenar con nosotros!",
-          aboutTitle: "Sobre nosotros",
-          aboutText: "Bienvenido a Sunset Bistro — un lugar donde la comida se encuentra con el alma.",
-          footer: "&copy; 2025 Sunset Bistro. Todos los derechos reservados."
-        },
-        fr: {
-          home: "Accueil",
-          menu: "Menu",
-          order: "commander",
-          about: "à propos",
-          login: "Connexion",
-          signup: "S'inscrire",
-          heroTitle: "Nourriture délicieuse, ambiance chaleureuse",
-          heroText: "Venez dîner avec nous !",
-          aboutTitle: "À propos de nous",
-          aboutText: "Bienvenue au Sunset Bistro — un endroit où la nourriture rencontre l'âme.",
-          footer: "&copy; 2025 Sunset Bistro. Tous droits réservés."
-        }
-      };
+  <footer>
+    <p data-translate="footer">&copy; 2025 AISU. All rights reserved.</p>
+  </footer>
 
-      document.getElementById('language-select').addEventListener('change', function() {
-        const lang = this.value;
-        document.querySelectorAll('[data-translate]').forEach(el => {
-          const key = el.getAttribute('data-translate');
-          el.innerHTML = translations[lang][key];
-        });
-        document.querySelector('.hero h2').innerHTML = translations[lang].heroTitle;
-        document.querySelector('.hero p').innerHTML = translations[lang].heroText;
-        document.querySelector('.about h2').innerHTML = translations[lang].aboutTitle;
-        document.querySelector('.about p').innerHTML = translations[lang].aboutText;
-        document.querySelector('footer p').innerHTML = translations[lang].footer;
+  <script>
+    // All translated text, organized by language code
+    var translations = {
+      en: {
+        home:      "Home",
+        menu:      "Menu",
+        order:     "Order Now",
+        about:     "About Us",
+        login:     "Log In",
+        signup:    "Sign Up",
+        heroTitle: "Delicious Food, Cozy Atmosphere",
+        heroText:  "Come dine with us!",
+        aboutTitle: "About Us",
+        footer:    "© 2025 AISU. All rights reserved."
+      },
+      es: {
+        home:      "Inicio",
+        menu:      "Menú",
+        order:     "Ordenar Ahora",
+        about:     "Sobre Nosotros",
+        login:     "Iniciar Sesión",
+        signup:    "Regístrate",
+        heroTitle: "Comida deliciosa, ambiente acogedor",
+        heroText:  "¡Ven a cenar con nosotros!",
+        aboutTitle: "Sobre Nosotros",
+        footer:    "© 2025 AISU. Todos los derechos reservados."
+      },
+      fr: {
+        home:      "Accueil",
+        menu:      "Menu",
+        order:     "Commander",
+        about:     "À Propos",
+        login:     "Connexion",
+        signup:    "S'inscrire",
+        heroTitle: "Nourriture délicieuse, ambiance chaleureuse",
+        heroText:  "Venez dîner avec nous !",
+        aboutTitle: "À Propos de Nous",
+        footer:    "© 2025 AISU. Tous droits réservés."
+      }
+    };
+
+    // Listen for when the user picks a different language
+    document.getElementById('language-select').addEventListener('change', function() {
+      var selectedLanguage = this.value;
+      var words = translations[selectedLanguage];
+
+      var elements = document.querySelectorAll('[data-translate]');
+      elements.forEach(function(element) {
+        var key = element.getAttribute('data-translate');
+        element.textContent = words[key];
       });
+    });
 
-      // Cuisine slider functionality
-      let currentSlide = 0;
-      const slidesToShow = 5; // Show 5 items at once on desktop
-      
-      function slideLeft() {
-        const slider = document.querySelector('.cuisine-slider');
-        const totalTiles = document.querySelectorAll('.cuisine-tile').length;
-        const maxSlide = totalTiles - slidesToShow;
-        
-        currentSlide = Math.max(currentSlide - 1, 0);
-        updateSlider();
-      }
-      
-      function slideRight() {
-        const slider = document.querySelector('.cuisine-slider');
-        const totalTiles = document.querySelectorAll('.cuisine-tile').length;
-        const maxSlide = totalTiles - slidesToShow;
-        
-        currentSlide = Math.min(currentSlide + 1, maxSlide);
-        updateSlider();
-      }
-      
-      function updateSlider() {
-        const slider = document.querySelector('.cuisine-slider');
-        const tileWidth = 120; // Width + margin
-        const translateX = -(currentSlide * tileWidth);
-        slider.style.transform = `translateX(${translateX}px)`;
-        
-        // Update button states
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        const totalTiles = document.querySelectorAll('.cuisine-tile').length;
-        const maxSlide = totalTiles - slidesToShow;
-        
-        prevBtn.disabled = currentSlide === 0;
-        nextBtn.disabled = currentSlide >= maxSlide;
-      }
-      
-      // Initialize slider
-      document.addEventListener('DOMContentLoaded', function() {
-        updateSlider();
-        
-        // Add click functionality to cuisine tiles
-        document.querySelectorAll('.cuisine-tile').forEach(tile => {
-          tile.addEventListener('click', function() {
-            const cuisineType = this.querySelector('h4').textContent.toLowerCase();
-            window.location.href = `menu.html#${cuisineType}`;
-          });
+    // Cuisine slider
+    var currentSlide = 0;
+    var slidesToShow = 5;
+
+    function slideLeft() {
+      currentSlide = Math.max(currentSlide - 1, 0);
+      updateSlider();
+    }
+
+    function slideRight() {
+      var totalTiles = document.querySelectorAll('.cuisine-tile').length;
+      var maxSlide = totalTiles - slidesToShow;
+      currentSlide = Math.min(currentSlide + 1, maxSlide);
+      updateSlider();
+    }
+
+    function updateSlider() {
+      var slider = document.querySelector('.cuisine-slider');
+      var totalTiles = document.querySelectorAll('.cuisine-tile').length;
+      var maxSlide = totalTiles - slidesToShow;
+      var firstTile = document.querySelector('.cuisine-tile');
+      var tileWidth = firstTile.offsetWidth;
+      var gap = parseInt(getComputedStyle(slider).gap);
+      var stepSize = tileWidth + gap;
+      var moveBy = -(currentSlide * stepSize);
+      slider.style.transform = 'translateX(' + moveBy + 'px)';
+
+      var prevBtn = document.querySelector('.prev-btn');
+      prevBtn.disabled = (currentSlide === 0);
+
+      var nextBtn = document.querySelector('.next-btn');
+      nextBtn.disabled = (currentSlide >= maxSlide);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSlider();
+
+      var tiles = document.querySelectorAll('.cuisine-tile');
+      tiles.forEach(function(tile) {
+        tile.addEventListener('click', function() {
+          var cuisineName = tile.querySelector('h4').textContent.toLowerCase();
+          window.location.href = 'menu.html#' + cuisineName;
         });
       });
-      </script>
-
-        <footer>
-          <p>&copy; 2025 AISU. All rights reserved.</p>
-        </footer>
+    });
+  </script>
 
 </body>
 </html>
